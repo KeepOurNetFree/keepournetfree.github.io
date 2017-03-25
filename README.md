@@ -1,26 +1,22 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Grayscale](http://startbootstrap.com/template-overviews/grayscale/)
+# [KeepOurNetFree](http://keepournetfree.org/)
 
-[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This template features various content sections and a Google Maps section with a custom map marker.
+[KeepOurNetFree](http://keepournetfree.org/) is a website designed to inform about the dangers of S.J.Res.34 and how to fight back against it.
 
-## Getting Started
+## If You Want to Contribute
 
-To use this template, choose one of the following options to get started:
-* Download the latest release on Start Bootstrap
+You are more than welcome to contribute, feel free to.  Just let us know what you are doing so that we don't reinvent the wheel 9000 times.
+* Send one of us a message.
 * Fork this repository on GitHub
+* Send a pull request
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-grayscale/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/grayscale/).
+Found a bug or an issue? [Open a new issue](https://github.com/KeepOurNetFree/keepournetfree.github.io/issues) here on GitHub and we will take a look at it as soon possible
 
-## Creator
+## Credits and Legal
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+This website was jump started using Greyscale Bootstrap.  All credit to **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/), for creating the template.
 
 Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
 
 Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
