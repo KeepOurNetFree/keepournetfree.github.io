@@ -5,9 +5,15 @@
 ## If You Want to Contribute
 
 You are more than welcome to contribute, feel free to.  Just let us know what you are doing so that we don't reinvent the wheel 9000 times.
-* Send one of us a message.
+* Send one of us a message
 * Fork this repository on GitHub
 * Send a pull request
+
+### Syntax and Standards
+* Comment other people's code instead of deleting it, let them delete it
+* Avoid "hacky" stuff like document.getElementById('derp'), use JQuery instead
+* Avoid pushing to master unless you absolutely have to, master is live code
+* Please for the love of all things sacred comment any scripts you write
 
 ## Bugs and Issues
 
