@@ -93,7 +93,7 @@
                 Sincerely, <br><br>
                 [Your Name] <br><br>
                 </p>
-                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" style="color: black; display: inline;" class="btn-lg"/></span><input type="button" onclick="sendMail()" class="btn btn-default btn-lg" style="float: right; display: block;" value="Find My Congressperson"></a>
+                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" style="color: black; display: inline;" class="btn-lg"/></span><input type="button" id="zipButton" onclick="sendMail()" class="btn btn-default btn-lg" style="float: right; display: block;" value="Find My Congressperson"></a>
                 <div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
             </div>
 
@@ -126,7 +126,7 @@
 
     var fadeOutCanFire = true // fadeOut flag
 
-    // Sends user to house.gov to find their congressperson.
+    // Sends user to house.gov to find their congressperson
     function sendMail()
     {
         var zip = $("#zip").val(); // Must be valid zip code
@@ -140,6 +140,13 @@
             }, 3000);
         }
     }
+
+    // Enter keydown event for zip code text box
+    $("#zip").keyup(function(event){
+        if(event.keyCode == 13){ // 13 = Enter Key.  Keycodes are kinda hacky, lets fix this later
+            $("#zipButton").click();
+        }
+    });
 
 </script>
 
