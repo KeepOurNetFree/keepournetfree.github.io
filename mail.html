@@ -117,7 +117,7 @@
     {
         var zip = $("#zip").val();
         if (zip.length == 5 && !isNaN(zip)) {
-            window.location = "http://ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP";
+            window.open("http://ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP");
         } else {
             window.alert("Please enter a 5 digit zip code.");
         }
