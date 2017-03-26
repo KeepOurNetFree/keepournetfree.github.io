@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Keep Our Net Free</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">
+                    <i class="fa fa-play-circle"></i> <span class="light">Keep Our Net Free</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading" id="daysWithout" ><!--style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">-->Keep Our Net Free</h1>
+                        <p class="intro-text">
+                            <br></p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Message Your Congressman</h2>
+
+                <h4>Use The Following Message Template</h4>
+                <p id="message" style="text-align: left";>
+                A bill has recently passed in the Senate that puts the privacy of all citizens who use the Internet at risk. This deadly bill is referred to as S.J.Res.34, and it allows any Internet Service Provider (ISP) to distribute and sell confidential information of its users. Information trading is not a new practice, but it has previously only been performed by companies like Google and Facebook. These companies are different than an ISP, because you had to opt-in to them, but providing Internet is a near-monopoly, and someone who lives in modern times cannot avoid using the Internet. If this bill passes, the information of every American citizen, including you, would potentially be available to everyone. This information includes, but is not limited to:<br><br>
+                • Confidential Medical Information. If you’ve ever searched the Internet for a specific symptom, then someone can learn that and infer whatever you are suffering from.<br><br>
+                • Browsing Habits. Whether you use the Internet for research, work, social media, or pornography, the entire world can pay to know. This is not simply what sites you visit, but what you are attempting to find. This can clue political opponents in to what you are researching for an upcoming debate over a bill or even let an opponent run a smear campaign over some embarrassing website you went to one time. This can also allow for illegal discrimination from an employer; for example, if you regularly visit websites with content an employer disagrees with, the hiring manager can look at your history and decide to not hire you.<br><br>
+                As a concerned member of the community that you represent, I urge you to vote no on S.J.Res.34.<br><br>
+                </p>
+                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" style="color: black; display: inline;" class="btn-lg"/></span><input type="button" onclick="sendMail()" class="btn btn-default btn-lg" style="float: right; display: block;" value="Find My Congressperson"></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <!-- <br/><br/> -->
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+
+</body>
+
+<!-- Logic JavaScript -->
+<script type="text/javascript">
+
+    function sendMail()
+    {
+      var zip = $("#zip").val();
+      if (zip.length == 5) {
+<<<<<<< HEAD
+        window.location = "http://ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP";
+=======
+        window.location = "ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP";
+>>>>>>> b3b4fbde1d02301a102af2ef646e578f9db9dea4
+    }
+  }
+</script>
+
+</html>
