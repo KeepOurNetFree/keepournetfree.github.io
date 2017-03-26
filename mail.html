@@ -94,6 +94,7 @@
                 [Your Name] <br><br>
                 </p>
                 <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" style="color: black; display: inline;" class="btn-lg"/></span><input type="button" onclick="sendMail()" class="btn btn-default btn-lg" style="float: right; display: block;" value="Find My Congressperson"></a>
+                <div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
             </div>
 
         </div>
@@ -123,15 +124,21 @@
 <!-- Logic JavaScript -->
 <script type="text/javascript">
 
+    // Sends user to house.gov to find their congressperson.
     function sendMail()
     {
         var zip = $("#zip").val();
         if (zip.length == 5 && !isNaN(zip)) {
-            window.open("http://ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP");
+            window.open("http://ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP"); // Open link in new tab
         } else {
-            window.alert("Please enter a 5 digit zip code.");
+            $('#display-success').fadeIn().delay(3000).fadeOut(); // Error message
         }
     }
+
+    // setTimeout(function() {
+    //     $('#display-success').fadeOut().text('')
+    // }, 10000 );
+
 </script>
 
 </html>
