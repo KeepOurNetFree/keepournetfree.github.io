@@ -20,6 +20,11 @@ p {
     font-size: 18px;
     line-height: 1.5;
 }
+#senators {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 10px;
+}
 #senators div ul {
     list-style-type: none;
 }
@@ -122,7 +127,7 @@ a:hover, a:focus {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro-background.jpg) no-repeat bottom center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -218,7 +223,7 @@ a:hover, a:focus {
     width: 100%;
     padding: 50px 0;
     color: white;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/senators-background.jpg) no-repeat center center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
