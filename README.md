@@ -6,6 +6,7 @@
 
 You are more than welcome to contribute, feel free to.  Just let us know what you are doing so that we don't reinvent the wheel 9000 times.
 * Send one of us a message
+* Join us on IRC (irc.snoonet.org#KeepOurNetFree)
 * Fork this repository on GitHub
 * Send a pull request
 
@@ -21,7 +22,7 @@ Found a bug or an issue? [Open a new issue](https://github.com/KeepOurNetFree/ke
 
 ## Credits and Legal
 
-This website was jump started using Greyscale Bootstrap.  All credit to **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/), for creating the template.
+This website was jump started using Greyscale Bootstrap.  All credit for Greyscale to **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/), for creating the template.
 
 Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
