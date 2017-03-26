@@ -23,6 +23,17 @@ p {
 #senators div ul {
     list-style-type: none;
 }
+.text {
+  text-align: left;
+}
+#zip {
+  color: black;
+  display: inline;
+}
+#zipButton {
+  float: right;
+  display: block;
+}
 @media (min-width: 768px) {
     p {
     margin: 0 0 35px;

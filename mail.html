@@ -77,7 +77,7 @@
                 <h2>Message Your Congressman</h2>
 
                 <h4>Use The Following Message Template</h4>
-                <p style="text-align: left;">
+                <p class="text">
                 Dear [Your House Representative], <br><br>
                 The Senate has recently passed a bill that puts the privacy of all U.S. internet users at risk. The bill in question, S.J.Res.34, kills a landmark FCC regulation passed last December requiring telecommunications carriers to <br><br>
                 a. Provide clear and accurate privacy notices to customers, <br><br>
@@ -93,7 +93,7 @@
                 Sincerely, <br><br>
                 [Your Name] <br><br>
                 </p>
-                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" style="color: black; display: inline;" class="btn-lg"/></span><input type="button" id="zipButton" onclick="sendMail()" class="btn btn-default btn-lg" style="float: right; display: block;" value="Find My Congressperson"></a>
+                <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" class="btn-lg"/></span><input type="button" id="zipButton" onclick="sendMail()" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
                 <div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
             </div>
 
@@ -132,7 +132,7 @@
         var zip = $("#zip").val(); // Must be valid zip code
         if (zip.length == 5 && !isNaN(zip)) {
             window.open("http://ziplook.house.gov/htbin/findrep?ZIP=" + zip + "&Submit=FIND+YOUR+REP"); // Open link in new tab
-        } else if (fadeOutCanFire) {  
+        } else if (fadeOutCanFire) {
             fadeOutCanFire = false; // Don't fire fadeOut if it is currenty running
             $('#display-success').fadeIn().delay(3000).fadeOut(); // Error message
             setTimeout(function resetFadeOutCanFire() {
