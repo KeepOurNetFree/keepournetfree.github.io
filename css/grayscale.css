@@ -20,6 +20,13 @@ p {
     font-size: 18px;
     line-height: 1.5;
 }
+#about {
+}
+#senators {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+}
 #senators div ul {
     list-style-type: none;
 }
@@ -104,10 +111,9 @@ a:hover, a:focus {
     background: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-}.intro {
+.intro {
     display: table;
     width: 100%;
-    height: auto;
     padding: 100px 0;
     text-align: center;
     color: white;
@@ -125,9 +131,6 @@ a:hover, a:focus {
 .intro .intro-body .brand-heading {
     font-size: 40px;
 }
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
 @media (min-width: 768px) {
     .intro {
     height: 100%;
@@ -138,6 +141,9 @@ a:hover, a:focus {
 }
 .intro .intro-body .intro-text {
     font-size: 26px;
+}
+.intro-text {
+    margin-bottom: 100px;
 }
 }.btn-circle {
     width: 70px;
