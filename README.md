@@ -1,6 +1,6 @@
-# [KeepOurNetFree](http://keepournetfree.org/)
+# [KeepOurNetFree](http://www.keepournetfree.org/)
 
-[KeepOurNetFree](http://keepournetfree.org/) is a website designed to inform about the dangers of S.J.Res.34 and how to fight back against it.
+[KeepOurNetFree](http://www.keepournetfree.org/) is a website designed to inform about the dangers of S.J.Res.34 and how to fight back against it.
 
 ## If You Want to Contribute
 
