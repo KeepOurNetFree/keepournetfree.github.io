@@ -42,6 +42,7 @@ a:hover, a:focus {
 
 .social {
   display: inline-block;
+  margin-top: 5px;
   margin-left: 15px;
   width: 18px;
 }
@@ -102,7 +103,12 @@ footer p {
 }
 
 /* CLASSES */
-
+.page-scroll {
+  margin-top: 10px;
+}
+.navbar {
+  height: 75px;
+}
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -111,7 +117,7 @@ footer p {
     background-color: black;
 }
 .navbar-custom .navbar-toggle {
-    padding: 4px 6px;
+    padding: 15px 6px;
     font-size: 16px;
     color: white;
 }
@@ -119,6 +125,7 @@ footer p {
     outline: none;
 }
 .navbar-custom .navbar-brand {
+    text-align: center;
     font-weight: 700;
 }
 .navbar-custom .navbar-brand:focus {
