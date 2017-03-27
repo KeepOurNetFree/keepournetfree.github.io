@@ -40,12 +40,10 @@ a:hover, a:focus {
     color: #1d9b6c;
 }
 
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-ul.banner-social-buttons li:last-child {
-    margin-bottom: 0;
+.social {
+  display: inline-block;
+  margin-left: 15px;
+  width: 18px;
 }
 
 footer {
