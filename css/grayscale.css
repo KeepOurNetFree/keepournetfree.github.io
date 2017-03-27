@@ -338,7 +338,21 @@ input[type=text] {
     ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;
-        padding: 0; }
+        padding: 0;
+    }
+}
+
+@media (max-width:768px) {
+    #zip {
+        width: 100%;
+        margin-bottom: 12px;
+        display: inline-block;
+    }
+
+    #zipButton {
+        width: 100%;
+        display: inline-block;
+    }
 }
 
 @media (min-width: 768px) {
