@@ -109,6 +109,10 @@ footer p {
 .navbar {
   height: 75px;
 }
+.navbar-nav {
+  z-index: 2;
+  background-color: black;
+}
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
