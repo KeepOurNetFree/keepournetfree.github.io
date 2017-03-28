@@ -103,7 +103,9 @@ footer p {
 }
 
 /* CLASSES */
-
+.page-scroll {
+  margin-top: 10px;
+}
 .navbar {
   height: 75px;
 }
@@ -127,6 +129,7 @@ footer p {
     outline: none;
 }
 .navbar-custom .navbar-brand {
+    margin-top: 10px;
     text-align: center;
     font-weight: 700;
 }
