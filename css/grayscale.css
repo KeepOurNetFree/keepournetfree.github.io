@@ -352,6 +352,9 @@ input[type=text] {
 }
 
 @media (max-width:768px) {
+    .navbar-nav {
+      margin-top: 4px;
+    }
     #zip {
         width: 100%;
         margin-bottom: 12px;
