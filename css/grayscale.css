@@ -289,20 +289,20 @@ input[type=text] {
     -moz-animation-timing-function: linear;
 }
 
+#yes-votes {
+  width: auto;
+  height: auto;
+  max-width: 1280px;
+  max-height: 720px;
+}
+
 .download-section {
-    width: 100%;
-    padding: 50px 0;
     color: white;
-    background: url(../img/senators-background.jpg) no-repeat center center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-.download-section {
-    padding: 100px 0;
 }
 
 .content-section {
@@ -356,6 +356,12 @@ input[type=text] {
         margin-bottom: 20px;
         padding: 0;
     }
+    #yes-votes {
+      width: auto;
+      height: auto;
+      max-width: 1920px;
+      max-height: 1080px;
+    }
 }
 
 @media (max-width:768px) {
@@ -367,10 +373,15 @@ input[type=text] {
         margin-bottom: 12px;
         display: inline-block;
     }
-
     #zipButton {
         width: 100%;
         display: inline-block;
+    }
+    #yes-votes {
+      width: auto;
+      height: auto;
+      max-width: 1280px;
+      max-height: 720px;
     }
 }
 
