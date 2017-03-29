@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/KeepOurNetFree/keepournetfree.github.io.png?label=ready&title=Ready)](https://waffle.io/KeepOurNetFree/keepournetfree.github.io)
+[![Join The Conversation](https://discordapp.com/api/guilds/295745377083326464/embed.png)](https://discord.gg/GFt67vr) [![Stories in Ready](https://badge.waffle.io/KeepOurNetFree/keepournetfree.github.io.png?label=ready&title=Ready)](https://waffle.io/KeepOurNetFree/keepournetfree.github.io)
 # [KeepOurNetFree](http://www.keepournetfree.org/)
 
 [KeepOurNetFree](http://www.keepournetfree.org/) is a website designed to inform about the dangers of S.J.Res.34 and how to fight back against it.

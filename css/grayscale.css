@@ -49,14 +49,7 @@ a:hover, a:focus {
 
 footer {
     padding: 50px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer {
-    padding: 50px 0;
+    background-color: #222;
 }
 
 footer p {
@@ -123,6 +116,9 @@ footer p {
 .navbar {
   height: 80px;
 }
+.navbar-collapse {
+  border-top: 0;
+}
 .navbar-nav {
   z-index: 2;
   background-color: black;
@@ -135,7 +131,7 @@ footer p {
     background-color: black;
 }
 .navbar-custom .navbar-toggle {
-    padding: 15px 6px;
+    padding: 15px 0px;
     margin-top: 13px;
     margin-bottom: 13px;
     font-size: 16px;
@@ -145,6 +141,7 @@ footer p {
     outline: none;
 }
 .navbar-custom .navbar-brand {
+    padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 17.5px;
