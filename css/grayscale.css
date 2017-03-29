@@ -106,6 +106,9 @@ footer p {
 .page-scroll {
   margin-top: 15px;
 }
+.navbar-collapse {
+  border: none;
+}
 .navbar {
   height: 80px;
 }
@@ -307,7 +310,6 @@ input[type=text] {
 .content-section {
     padding-top: 100px;
 }
-
 .text {
   text-align: left;
 }
@@ -364,7 +366,7 @@ input[type=text] {
 
 @media (max-width:768px) {
     .navbar-nav {
-      margin-top: 4px;
+      margin-top: 0px;
     }
     #zip {
         width: 100%;
