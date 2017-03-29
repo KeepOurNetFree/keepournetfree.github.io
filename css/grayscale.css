@@ -104,10 +104,10 @@ footer p {
 
 /* CLASSES */
 .page-scroll {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .navbar {
-  height: 75px;
+  height: 80px;
 }
 .navbar-nav {
   z-index: 2;
@@ -122,6 +122,8 @@ footer p {
 }
 .navbar-custom .navbar-toggle {
     padding: 15px 6px;
+    margin-top: 13px;
+    margin-bottom: 13px;
     font-size: 16px;
     color: white;
 }
@@ -129,8 +131,13 @@ footer p {
     outline: none;
 }
 .navbar-custom .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
     text-align: center;
     font-weight: 700;
+    height: auto;
 }
 .navbar-custom .navbar-brand:focus {
     outline: none;
