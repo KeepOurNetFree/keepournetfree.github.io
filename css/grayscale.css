@@ -104,8 +104,12 @@ footer p {
     list-style-type: none;
 }
 
+#download > div > div > div {
+    padding: 7px;
+}
+
 /* CLASSES */
-.row {
+.reps-table > .row {
   margin-right: 0;
   font-size: 1.1em;
   border-bottom: 1px solid #555;
