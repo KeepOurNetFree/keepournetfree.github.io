@@ -292,8 +292,7 @@ input[type=text] {
 #yes-votes {
   width: auto;
   height: auto;
-  max-width: 1280px;
-  max-height: 720px;
+  max-width: 100vw;
 }
 
 .download-section {
@@ -350,7 +349,6 @@ input[type=text] {
 /* MEDIA QUERIES */
 
 @media (min-width: 767px) {
-    .content-section { margin-top: 250px; }
     ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;
@@ -376,12 +374,6 @@ input[type=text] {
     #zipButton {
         width: 100%;
         display: inline-block;
-    }
-    #yes-votes {
-      width: auto;
-      height: auto;
-      max-width: 1280px;
-      max-height: 720px;
     }
 }
 
