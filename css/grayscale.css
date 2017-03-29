@@ -107,6 +107,8 @@ footer p {
 /* CLASSES */
 .row {
   margin-right: 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #555;
 }
 .page-scroll {
   margin-top: 15px;
