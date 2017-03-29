@@ -68,7 +68,9 @@ footer p {
 }
 
 /* IDs */
-
+#reps {
+  margin-top: 35px;
+}
 #map {
     width: 100%;
     height: 400px;
@@ -95,9 +97,21 @@ footer p {
     list-style-type: none;
 }
 
+#download > div > div > div {
+    padding: 7px;
+}
+
 /* CLASSES */
+.reps-table > .row {
+  margin-right: 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #555;
+}
 .page-scroll {
   margin-top: 15px;
+}
+.navbar-collapse {
+  border: none;
 }
 .navbar {
   height: 80px;
@@ -304,11 +318,9 @@ input[type=text] {
 .content-section {
     padding-top: 100px;
 }
-
 .text {
   text-align: left;
 }
-
 .light {
     font-weight: 400;
 }
