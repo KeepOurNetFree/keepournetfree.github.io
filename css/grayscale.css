@@ -115,12 +115,8 @@ footer p {
 .navbar {
   height: 80px;
 }
-.navbar-collapse {
-  border-top: 0;
-}
 .navbar-nav {
   z-index: 2;
-  background: rgba(50,52,55,.5);
 }
 .navbar-custom {
     margin-bottom: 0;
@@ -374,6 +370,7 @@ input[type=text] {
 @media (max-width:768px) {
     .navbar-nav {
       margin-top: 0px;
+      background: rgba(50,52,55,.5);
     }
     #zip {
         color: Dimgray;
