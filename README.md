@@ -7,7 +7,9 @@
 
 You are more than welcome to contribute, feel free to.  Just let us know what you are doing so that we don't reinvent the wheel 9000 times.
 * Send one of us a message
-* Join us on IRC (irc.snoonet.org#KeepOurNetFree)
+* Join us on 
+    - Discord (https://discord.gg/QKbpt)
+    - IRC (irc.snoonet.org#KeepOurNetFree)
 * Fork this repository on GitHub
 * Send a pull request
 
