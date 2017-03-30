@@ -145,7 +145,7 @@
 
 	// Enter keydown event for zip code text box
 	$("#zip").keyup(function(event){
-		if(event.keyCode == 0x0D){ // 0x0D = Enter Key.  Keycodes are kinda hacky, lets fix this later
+		if(event.keyCode == 13){
 			$("#zipButton").click();
 		}
 	});
