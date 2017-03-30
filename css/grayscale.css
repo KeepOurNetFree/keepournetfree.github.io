@@ -77,6 +77,7 @@ footer p {
 }
 
 #zip {
+    color: Dimgray;
     float: left;
     display: inline;
 }
@@ -120,6 +121,7 @@ footer p {
 }
 .navbar-nav {
   z-index: 2;
+  background: rgba(50,52,55,1);
 }
 .navbar-custom {
     margin-bottom: 0;
@@ -182,7 +184,9 @@ footer p {
     background: rgba(50,52,55,1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
+.mail-nav-bar {
+  background: rgba(50,52,55,1);
+}
 .intro {
     display: table;
     width: 100%;
@@ -373,6 +377,7 @@ input[type=text] {
       margin-top: 0px;
     }
     #zip {
+        color: Dimgray;
         width: 100%;
         margin-bottom: 12px;
         display: inline-block;
