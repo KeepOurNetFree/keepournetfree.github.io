@@ -305,7 +305,7 @@ input[type=text] {
 }
 
 .download-section {
-    color: white;
+    color: Dimgray;
     background-color: #e6e8ed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
