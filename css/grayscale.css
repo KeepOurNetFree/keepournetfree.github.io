@@ -123,6 +123,9 @@ footer p {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
 }
 .navbar-custom .navbar-toggle {
     padding: 15px 0px;
@@ -385,15 +388,6 @@ input[type=text] {
 }
 
 @media (min-width: 768px) {
-    .navbar-custom {
-        padding: 20px 0;
-        border-bottom: none;
-        letter-spacing: 1px;
-        background: transparent;
-        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-        transition: background .5s ease-in-out, padding .5s ease-in-out;
-    }
     .intro {
         height: 100%;
         padding: 0;
