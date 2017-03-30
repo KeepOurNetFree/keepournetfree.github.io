@@ -120,7 +120,7 @@ footer p {
 }
 .navbar-nav {
   z-index: 2;
-  background: rgba(50,52,55,1);
+  background: rgba(50,52,55,.5);
 }
 .navbar-custom {
     margin-bottom: 0;
