@@ -68,7 +68,8 @@ footer p {
 
 /* IDs */
 #thankButton, #spankButton {
-  margin-top: 10px;
+  font-size: 15px;
+  height: 47px;
 }
 #reps {
   margin-top: 35px;
@@ -82,12 +83,14 @@ footer p {
 #zip {
     color: Dimgray;
     float: left;
-    display: inline;
+    display: inline-block;
 }
 
 #zipButton {
   float: right;
-  display: block;
+  display: inline-block;
+  height: 47px;
+  margin-bottom: 5px;
 }
 
 #senators {
@@ -398,11 +401,9 @@ input[type=text] {
         color: Dimgray;
         width: 100%;
         margin-bottom: 12px;
-        display: inline-block;
     }
     #zipButton {
         width: 100%;
-        display: inline-block;
     }
     #download {
       font-size: 2vw;
