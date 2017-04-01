@@ -92,8 +92,33 @@ footer p {
     padding: 0px;
     margin: 0;
 }
-
+#yes-voters {
+  display: block;
+  margin-top: 10px;
+}
 /* CLASSES */
+.repName {
+  display: block;
+  border: 1px solid #3c763d;
+  color: Dimgray;
+  outline: none;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  border-radius: 0;
+}
+.reps-table > .row {
+  margin-right: 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #555;
+}
+.col-xs-4 {
+  padding: 0;
+}
 .page-scroll {
   margin-top: 15px;
 }
@@ -375,6 +400,9 @@ input[type=text] {
     #zipButton {
         width: 100%;
         display: inline-block;
+    }
+    #download {
+      font-size: 2vw;
     }
 }
 
