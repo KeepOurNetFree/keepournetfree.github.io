@@ -94,6 +94,23 @@
 				<p>
 					Use the tool below to find your congressperson. Then, call or email them and either show them appreciation for opposing this bill or chastise them for supporting it.
 				</p>
+
+                <div>
+                <input type="button" id="thankButton" onclick="thankShow()" class="btn btn-default btn-lg" value="Thank">
+                <input type="button" id="spankButton" onclick="spankShow()" class="btn btn-default btn-lg" value="Spank">
+                </div>
+
+                <br><br>
+
+                <div id="thank-you-letter" style="display: none;"><p style="text-align: left">Thank you letter.<br><br>
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+                </p></div>
+                <div id="spank-you-letter" style="display: none;"><p style="text-align: left">Spank you letter.<br><br>
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+                </p></div>
+
+                <br><br>
+
 				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" /></span><input type="button" id="zipButton" onclick="sendMail()" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
 				<div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
 			</div>
@@ -152,6 +169,19 @@
 			$("#zipButton").click();
 		}
 	});
+
+    // Thank/Spank code.
+
+    function thankShow()
+    {
+        $('#spank-you-letter').hide();
+        $('#thank-you-letter').fadeIn();
+    }
+    function spankShow()
+    {
+        $('#thank-you-letter').hide();
+        $('#spank-you-letter').fadeIn();
+    }
 
 </script>
 
