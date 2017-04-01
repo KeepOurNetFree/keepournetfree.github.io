@@ -67,6 +67,9 @@ footer p {
 }
 
 /* IDs */
+#thankButton, #spankButton {
+  margin-top: 10px;
+}
 #reps {
   margin-top: 35px;
 }
