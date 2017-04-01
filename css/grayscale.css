@@ -106,6 +106,9 @@ footer p {
   font-size: 1.1em;
   border-bottom: 1px solid #555;
 }
+.col-xs-4 {
+  padding: 0;
+}
 .page-scroll {
   margin-top: 15px;
 }
@@ -384,6 +387,9 @@ input[type=text] {
     #zipButton {
         width: 100%;
         display: inline-block;
+    }
+    #download {
+      font-size: 2vw;
     }
 }
 
