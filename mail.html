@@ -94,6 +94,49 @@
 				<p>
 					Use the tool below to find your congressperson. Then, call or email them and either show them appreciation for opposing this bill or chastise them for supporting it.
 				</p>
+                <div>
+                <input type="button" id="thankButton" onclick="thankShow()" class="btn btn-default btn-lg" value="Thank">
+                <input type="button" id="spankButton" onclick="spankShow()" class="btn btn-default btn-lg" value="Spank">
+                </div>
+
+                <br><br>
+
+                <div id="thank-you-letter" style="display: none;"><p style="text-align: left">
+                Dear [Your House Representative], <br><br>
+                I am writing you to express my gratitude for voting against H.J. Res86. As a concerned citizen I am deeply troubled by the fact that this bill has passed. The bill in question kills a landmark FCC regulation passed last December requiring telecommunications carriers to <br><br>
+                a. Provide clear and accurate privacy notices to customers, <br><br>
+                b. Allow customers to provide opt-in approval to use and share sensitive customer proprietary information and opt-out approval to use and share non-sensitive customer proprietary information, <br><br>
+                c. Take reasonable measures to secure customer proprietary information, <br><br>
+                d. Immediately inform their customers, the FCC, and law enforcement in the event of a potentially harmful data breach, <br><br>
+                e. Provide heightened notice and obtain affirmative consent from customers when offering financial incentives in exchange for said customers' confidential information. <br><br>
+                The aforementioned bill is now on the president's desk. If he signs it and it becomes law, none of the above regulations will take effect. <br><br>
+                The primary reason that this would be so damaging to consumer rights is because of the final rule - getting explicit permission from customers before financially leveraging their confidential information. <br><br>
+                Information trading is, of course, nothing new. Companies like Google and Facebook use it to provide ads targeted to the individual preferences of their users. The issue, however, lies in the fact that if these rules were killed, that would also allow Internet Service Providers (ISPs) to participate in information trading without their customers' consent - and whereas Facebook's information trading can be avoided by simply not using Facebook, it is nigh-impossible for U.S. citizens to avoid using the Internet as a whole in this day and age. On top of this, many regions of the U.S. are under a near-monopoly and have very little choice when it comes to choosing their ISP. Without these rules, there would be very little the average citizen would be able to do to avoid having their information leveraged for the financial gain of their ISP, at their expense. <br><br>
+                Information trading is not the only problem, however. Once our information is sold, there is no telling what can be done with it. For example - deducing medical information. If a customer's browsing history includes many instances of a website for sufferers of Type I Diabetes, it can be inferred that the customer has Type I Diabetes. Additionally, if a customer's search history includes a large number of searches for symptoms of the flu in a short time period, it can be inferred that the customer contracted the flu in that time frame. Whether you use the internet for research, work, social media, entertainment, or pornography, anyone can pay to know in order to leverage whatever information they find against you. <br><br>
+                As a concerned citizen and member of the community that you represent, I would once again like to thank you for protecting the privacy rights of all citizens.<br><br>
+                Sincerely, <br><br>
+                [Your Name] <br><br>
+                </p></div>
+                <div id="spank-you-letter" style="display: none;"><p style="text-align: left">
+                Dear [Your House Representative], <br><br>
+                I am writing you to express my displeasure with your vote in favor of H.J. Res86. As a concerned citizen I am deeply troubled by the fact that this bill has passed. The bill in question kills a landmark FCC regulation passed last December requiring telecommunications carriers to <br><br>
+                a. Provide clear and accurate privacy notices to customers, <br><br>
+                b. Allow customers to provide opt-in approval to use and share sensitive customer proprietary information and opt-out approval to use and share non-sensitive customer proprietary information, <br><br>
+                c. Take reasonable measures to secure customer proprietary information, <br><br>
+                d. Immediately inform their customers, the FCC, and law enforcement in the event of a potentially harmful data breach, <br><br>
+                e. Provide heightened notice and obtain affirmative consent from customers when offering financial incentives in exchange for said customers' confidential information. <br><br>
+                The aforementioned bill is now on the president's desk. If he signs it and it becomes law, none of the above regulations will take effect. <br><br>
+                The primary reason that this would be so damaging to consumer rights is because of the final rule - getting explicit permission from customers before financially leveraging their confidential information. <br><br>
+                Information trading is, of course, nothing new. Companies like Google and Facebook use it to provide ads targeted to the individual preferences of their users. The issue, however, lies in the fact that if these rules were killed, that would also allow Internet Service Providers (ISPs) to participate in information trading without their customers' consent - and whereas Facebook's information trading can be avoided by simply not using Facebook, it is nigh-impossible for U.S. citizens to avoid using the Internet as a whole in this day and age. On top of this, many regions of the U.S. are under a near-monopoly and have very little choice when it comes to choosing their ISP. Without these rules, there would be very little the average citizen would be able to do to avoid having their information leveraged for the financial gain of their ISP, at their expense. <br><br>
+                Information trading is not the only problem, however. Once our information is sold, there is no telling what can be done with it. For example - deducing medical information. If a customer's browsing history includes many instances of a website for sufferers of Type I Diabetes, it can be inferred that the customer has Type I Diabetes. Additionally, if a customer's search history includes a large number of searches for symptoms of the flu in a short time period, it can be inferred that the customer contracted the flu in that time frame. Whether you use the internet for research, work, social media, entertainment, or pornography, anyone can pay to know in order to leverage whatever information they find against you. <br><br>
+                As a concerned citizen and member of the community that you represent, I would once again like express how displeased I am that you have chosen to sell out the privacy rights of all citizens.<br><br>
+                Sincerely, <br><br>
+                [Your Name] <br><br>
+                </p></div>
+
+                <br><br>
+
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="zip" maxlength="5" placeholder="Input Zip" /></span><input type="button" id="zipButton" onclick="sendMail()" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
 				<input type="text" id="zip" maxlength="5" placeholder="Input Zip" /><input type="button" id="zipButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
 				<div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
 			</div>
@@ -565,6 +608,16 @@
 			$("#zipButton").click();
 		}
 	});
+    function thankShow()
+    {
+        $('#spank-you-letter').hide();
+        $('#thank-you-letter').fadeIn();
+    }
+    function spankShow()
+    {
+        $('#thank-you-letter').hide();
+        $('#spank-you-letter').fadeIn();
+    }
 </script>
 
 </html>

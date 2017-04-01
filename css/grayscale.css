@@ -89,15 +89,8 @@ footer p {
 
 #senators {
     border-radius: 20px;
-    padding: 10px;
-}
-
-#senators div ul {
-    list-style-type: none;
-}
-
-#download > div > div > div {
-    padding: 7px;
+    padding: 0px;
+    margin: 0;
 }
 #yes-voters {
   display: block;
@@ -128,6 +121,9 @@ footer p {
 }
 .page-scroll {
   margin-top: 15px;
+}
+.center {
+  width: 100vw;
 }
 .navbar-collapse {
   border: none;
@@ -323,6 +319,7 @@ input[type=text] {
   width: auto;
   height: auto;
   max-width: 100vw;
+  margin-top: 10px;
 }
 
 .download-section {
@@ -385,8 +382,7 @@ input[type=text] {
     #yes-votes {
       width: auto;
       height: auto;
-      max-width: 1920px;
-      max-height: 1080px;
+      max-width: 100vw;
     }
 }
 
