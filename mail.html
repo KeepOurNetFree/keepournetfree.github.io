@@ -148,8 +148,8 @@
         <p style="text-align: center">KeepOurNetFree, Private Internet Access, Snoonet, and affiliates aim to protect the integrity of the Internet.</p>
         <br><br>
         <div class="container text-center">
-            <a href="https://webchat.snoonet.org/KeepOurNetFree"><img src="img/snoonet.png" style="max-width:25%;max-height:25%;margin-right: 10px;"></img></a>
             <a href="https://www.privateinternetaccess.com/"><img src="img/pia.png" style="max-width:50%;"></img></a>
+            <a href="https://webchat.snoonet.org/KeepOurNetFree"><img src="img/snoonet.png" style="max-width:25%;max-height:25%;margin-right: 10px;"></img></a>
         </div>
     </footer>
 
@@ -171,10 +171,10 @@
 <script type="text/javascript">
 	function displayNameYes(rep, role, contactForm) {
 		if (role == "house") {
-			$("<span class='repName' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted Yes - Click to Spank" + "</span>").appendTo("#yes-voters");
+			$("<span class='repName btn btn-default btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#yes-voters");
 		}
 		if (role == "senate") {
-			$("<span class='repName' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted Yes - Click to Spank" + "</span>").appendTo("#yes-voters");
+			$("<span class='repName btn btn-default btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#yes-voters");
 		}
 		$(".repName").click(function (e) {
 			var link = e.target.getAttribute("contact");
@@ -183,10 +183,10 @@
 	}
 	function displayNameNo(rep, role, contactForm) {
 		if (role == "house") {
-			$("<span class='repName' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted No - Click to Thank" + "</span>").appendTo("#yes-voters");
+			$("<span class='repName btn btn-default btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted No - <strong>Click to Thank</strong>" + "</span>").appendTo("#yes-voters");
 		}
 		if (role == "senate") {
-			$("<span class='repName' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted No - Click to Thank" + "</span>").appendTo("#yes-voters");
+			$("<span class='repName btn btn-default btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted No - <strong>Click to Thank<strong>" + "</span>").appendTo("#yes-voters");
 		}
 		$(".repName").click(function (e) {
 			var link = e.target.getAttribute("contact");
