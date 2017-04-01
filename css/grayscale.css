@@ -99,8 +99,25 @@ footer p {
 #download > div > div > div {
     padding: 7px;
 }
-
+#yes-voters {
+  display: block;
+  margin-top: 10px;
+}
 /* CLASSES */
+.repName {
+  display: block;
+  border: 1px solid #3c763d;
+  color: Dimgray;
+  outline: none;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  border-radius: 0;
+}
 .reps-table > .row {
   margin-right: 0;
   font-size: 1.1em;
