@@ -411,6 +411,9 @@ input[type=text] {
     #download {
       font-size: 2vw;
     }
+    .repName {
+      font-size: 2.5vw;
+    }
 }
 
 @media (min-width: 768px) {
