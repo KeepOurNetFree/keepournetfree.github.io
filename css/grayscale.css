@@ -81,12 +81,15 @@ footer p {
 }
 
 #zip {
-    color: Dimgray;
-    float: left;
-    display: inline-block;
+  width: 300px;
+  color: Dimgray;
+  float: left;
+  display: inline;
 }
 
 #zipButton {
+  height: 47px;
+  width: 300px;
   float: right;
   display: inline-block;
   height: 47px;
@@ -247,9 +250,9 @@ footer p {
     text-transform: uppercase;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
     border-radius: 0;
 }
 

@@ -92,19 +92,12 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<h2>Contact your Congressperson</h2>
 				<p>
-					Use the tool below to find your congressperson. Then, call or email them and either show them appreciation for opposing this bill or chastise them for supporting it.
+					Use the tool below to find your congressperson. Then, call or email them and either thank them for opposing this bill or spank them for supporting it.
 				</p>
-				<div>
-					<input type="text" id="zip" maxlength="5" placeholder="Input Zip" />
-					<input type="button" id="zipButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
-					<div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
-				</div>
                 <div>
                 <input type="button" id="thankButton" onclick="thankShow()" class="btn btn-default btn-lg" value="Thank">
                 <input type="button" id="spankButton" onclick="spankShow()" class="btn btn-default btn-lg" value="Spank">
                 </div>
-
-								<div id="yes-voters"></div>
 
                 <br><br>
 
@@ -141,8 +134,13 @@
                 [Your Name] <br><br>
 							</p></div>
                 <br><br>
+								<input type="text" id="zip" maxlength="5" placeholder="Input Zip" />
+								<input type="button" id="zipButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
+								<div id="display-success" style="display: none; color: red;"><p>Please enter a 5 digit zip code.</p></div>
 			</div>
 		</div>
+				<div id="yes-voters"></div>
+        <br><br>
 	</section>
 
 	<!-- Footer -->
@@ -567,42 +565,48 @@
 					 return str;
 			 }
 			 if(zip.length == 5 && !isNaN(zip)) {
-				$.ajax({
-					url: 'https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zip,
-					success: function(data){
-						var congresspeople = data['results'];
-						for(var y = 0; y < congresspeople.length; y++) {
-							var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
-							var cleanName = removeDiacritics(name);
-							var chamber = congresspeople[y]['chamber'];
-							var contact = congresspeople[y]['contact_form'];
-							if(yesVotes.includes(cleanName)) {
-								displayNameYes(cleanName, chamber, contact);
-							} else {
-								displayNameNo(cleanName, chamber, contact);
+				 $.ajax({
+ 					url: 'https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zip,
+ 					success: function(data){
+ 						var congresspeople = data['results'];
+ 						for(var y = 0; y < congresspeople.length; y++) {
+ 							var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
+ 							var cleanName = removeDiacritics(name);
+ 							var chamber = congresspeople[y]['chamber'];
+ 							var contact = congresspeople[y]['contact_form'];
+							if(contact == null) {
+								contact = congresspeople[y]['website'];
 							}
-						}
-					}
-				});
-				if (zip == "12345") {
-					$.ajax({
-						url: 'https://congress.api.sunlightfoundation.com/legislators?query=tonko',
-						success: function(data){
-							var congresspeople = data['results'];
-							for(var y = 0; y < congresspeople.length; y++) {
-								var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
-								var cleanName = removeDiacritics(name);
-								var chamber = congresspeople[y]['chamber'];
-								var contact = congresspeople[y]['contact_form'];
-								if(yesVotes.includes(cleanName)) {
-									displayNameYes(cleanName, chamber, contact);
-								} else {
-									displayNameNo(cleanName, chamber, contact);
+ 							if(yesVotes.includes(cleanName)) {
+ 								displayNameYes(cleanName, chamber, contact);
+ 							} else {
+ 								displayNameNo(cleanName, chamber, contact);
+ 							}
+ 						}
+ 					}
+ 				});
+ 				if (zip == "12345") {
+ 					$.ajax({
+ 						url: 'https://congress.api.sunlightfoundation.com/legislators?query=tonko',
+ 						success: function(data){
+ 							var congresspeople = data['results'];
+ 							for(var y = 0; y < congresspeople.length; y++) {
+ 								var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
+ 								var cleanName = removeDiacritics(name);
+ 								var chamber = congresspeople[y]['chamber'];
+ 								var contact = congresspeople[y]['contact_form'];
+								if(contact == null) {
+									contact = congresspeople[y]['website'];
 								}
-							}
-						}
-					});
-				}
+ 								if(yesVotes.includes(cleanName)) {
+ 									displayNameYes(cleanName, chamber, contact);
+ 								} else {
+ 									displayNameNo(cleanName, chamber, contact);
+ 								}
+ 							}
+ 						}
+ 					});
+ 				}
 			} else if (fadeOutCanFire) {
 				fadeOutCanFire = false;
 				$('#display-success').fadeIn().delay(3000).fadeOut();
