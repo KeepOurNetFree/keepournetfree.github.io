@@ -567,6 +567,9 @@
 			 if(zip.length == 5 && !isNaN(zip)) {
 				 $.ajax({
  					url: 'https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zip,
+					crossDomain: true,
+					dataType: 'jsonp',
+					contentType: "jsonp",
  					success: function(data){
  						var congresspeople = data['results'];
  						for(var y = 0; y < congresspeople.length; y++) {
@@ -588,7 +591,10 @@
  				if (zip == "12345") {
  					$.ajax({
  						url: 'https://congress.api.sunlightfoundation.com/legislators?query=tonko',
- 						success: function(data){
+						crossDomain: true,
+						dataType: 'jsonp',
+						contentType: "jsonp",
+						success: function(data){
  							var congresspeople = data['results'];
  							for(var y = 0; y < congresspeople.length; y++) {
  								var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
