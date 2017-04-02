@@ -55,18 +55,11 @@ footer p {
     margin: 0;
 }
 
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
-}
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
-}
-
 /* IDs */
+#thankButton, #spankButton {
+  font-size: 15px;
+  height: 47px;
+}
 #reps {
   margin-top: 35px;
 }
@@ -77,14 +70,19 @@ footer p {
 }
 
 #zip {
-    color: Dimgray;
-    float: left;
-    display: inline;
+  width: 300px;
+  color: Dimgray;
+  float: left;
+  display: inline;
 }
 
 #zipButton {
+  height: 47px;
+  width: 300px;
   float: right;
-  display: block;
+  display: inline-block;
+  height: 47px;
+  margin-bottom: 5px;
 }
 
 #senators {
@@ -92,8 +90,33 @@ footer p {
     padding: 0px;
     margin: 0;
 }
-
+#yes-voters {
+  display: block;
+  margin-top: 10px;
+}
 /* CLASSES */
+.repName {
+  display: block;
+  border: 1px solid #3c763d;
+  color: Dimgray;
+  outline: none;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  border-radius: 0;
+}
+.reps-table > .row {
+  margin-right: 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #555;
+}
+.col-xs-4 {
+  padding: 0;
+}
 .page-scroll {
   margin-top: 15px;
 }
@@ -216,9 +239,9 @@ footer p {
     text-transform: uppercase;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
     border-radius: 0;
 }
 
@@ -370,11 +393,15 @@ input[type=text] {
         color: Dimgray;
         width: 100%;
         margin-bottom: 12px;
-        display: inline-block;
     }
     #zipButton {
         width: 100%;
-        display: inline-block;
+    }
+    #download {
+      font-size: 2vw;
+    }
+    .repName {
+      font-size: 2.5vw;
     }
 }
 
