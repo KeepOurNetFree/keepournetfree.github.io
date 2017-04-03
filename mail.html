@@ -176,10 +176,6 @@
 		if (role == "senate") {
 			$("<span class='repName btn btn-default btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#yes-voters");
 		}
-		$(".repName").click(function (e) {
-			var link = e.target.getAttribute("contact");
-			window.open(link);
-		});
 	}
 	function displayNameNo(rep, role, contactForm) {
 		if (role == "house") {
@@ -188,6 +184,8 @@
 		if (role == "senate") {
 			$("<span class='repName btn btn-default btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted No - <strong>Click to Thank<strong>" + "</span>").appendTo("#yes-voters");
 		}
+	}
+	function setClick() {
 		$(".repName").click(function (e) {
 			var link = e.target.getAttribute("contact");
 			window.open(link);
@@ -586,6 +584,7 @@
  								displayNameNo(cleanName, chamber, contact);
  							}
  						}
+						setClick();
  					}
  				});
  				if (zip == "12345") {
@@ -610,9 +609,57 @@
  									displayNameNo(cleanName, chamber, contact);
  								}
  							}
+							setClick();
+ 						}
+ 					});
+					$.ajax({
+ 						url: 'https://congress.api.sunlightfoundation.com/legislators?query=gillibrand',
+						crossDomain: true,
+						dataType: 'jsonp',
+						contentType: "jsonp",
+						success: function(data){
+ 							var congresspeople = data['results'];
+ 							for(var y = 0; y < congresspeople.length; y++) {
+ 								var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
+ 								var cleanName = removeDiacritics(name);
+ 								var chamber = congresspeople[y]['chamber'];
+ 								var contact = congresspeople[y]['contact_form'];
+								if(contact == null) {
+									contact = congresspeople[y]['website'];
+								}
+ 								if(yesVotes.includes(cleanName)) {
+ 									displayNameYes(cleanName, chamber, contact);
+ 								} else {
+ 									displayNameNo(cleanName, chamber, contact);
+ 								}
+ 							}
+ 						}
+ 					});
+					$.ajax({
+ 						url: 'https://congress.api.sunlightfoundation.com/legislators?query=schumer',
+						crossDomain: true,
+						dataType: 'jsonp',
+						contentType: "jsonp",
+						success: function(data){
+ 							var congresspeople = data['results'];
+ 							for(var y = 0; y < congresspeople.length; y++) {
+ 								var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
+ 								var cleanName = removeDiacritics(name);
+ 								var chamber = congresspeople[y]['chamber'];
+ 								var contact = congresspeople[y]['contact_form'];
+								if(contact == null) {
+									contact = congresspeople[y]['website'];
+								}
+ 								if(yesVotes.includes(cleanName)) {
+ 									displayNameYes(cleanName, chamber, contact);
+ 								} else {
+ 									displayNameNo(cleanName, chamber, contact);
+ 								}
+ 							}
  						}
  					});
  				}
+				setClick();
 			} else if (fadeOutCanFire) {
 				fadeOutCanFire = false;
 				$('#display-success').fadeIn().delay(3000).fadeOut();
