@@ -11,7 +11,7 @@ body {
 
 html {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -313,13 +313,6 @@ input[type=text] {
     -moz-animation-timing-function: linear;
 }
 
-#yes-votes {
-  width: auto;
-  height: auto;
-  max-width: 100vw;
-  margin-top: 10px;
-}
-
 .download-section {
     color: Dimgray;
     background-color: #e6e8ed;
@@ -377,11 +370,7 @@ input[type=text] {
         margin-bottom: 20px;
         padding: 0;
     }
-    #yes-votes {
-      width: auto;
-      height: auto;
-      max-width: 100vw;
-    }
+
 }
 
 @media (max-width:768px) {
