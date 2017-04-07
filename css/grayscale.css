@@ -56,9 +56,27 @@ footer p {
 }
 
 /* IDs */
-#thankButton, #spankButton {
+#thankButton {
   font-size: 15px;
   height: 47px;
+  color: #3c763d;
+  border: 1px solid #3c763d;
+  background-color: transparent;
+}
+#spankButton {
+  font-size: 15px;
+  height: 47px;
+  color: #9E0000;
+  border: 1px solid #9E0000;
+  background-color: transparent;
+}
+#spankButton:hover, .spank:hover {
+  color: white;
+  background-color: #9E0000;
+}
+#thankButton:hover, .thank:hover {
+  color: white;
+  background-color: #3c763d;
 }
 #reps {
   margin-top: 35px;
@@ -98,10 +116,10 @@ footer p {
 /* CLASSES */
 .repName {
   display: block;
-  border: 1px solid #3c763d;
   color: Dimgray;
   outline: none;
   margin: 0;
+  margin-bottom: 5px;
   font-size: 18px;
   text-align: center;
   background-color: transparent;
@@ -109,6 +127,14 @@ footer p {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   border-radius: 0;
+}
+.thank {
+  color: #3c763d;
+  border: 1px solid #3c763d;
+}
+.spank {
+  color: #9E0000;
+  border: 1px solid #9E0000;
 }
 .reps-table > .row {
   margin-right: 0;
@@ -262,13 +288,14 @@ input[type=text] {
     border-radius: 0;
 }
 
-.btn-default {
+.btn-default, .btn-default:focus {
     border: 1px solid #3c763d;
     color: #3c763d;
     background-color: transparent;
+    outline: none;
 }
 
-.btn-default:hover, .btn-default:focus {
+.btn-default:hover {
     border: 1px solid #3c763d;
     outline: none;
     color: #e6e8ed;
