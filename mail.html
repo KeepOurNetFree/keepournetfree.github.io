@@ -181,7 +181,6 @@
 		if (role == "senate") {
 			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#yes-voters");
 		}
-		setClick();
 	}
 	function displayNameNo(rep, role, contactForm) {
 		if (role == "house") {
@@ -190,7 +189,6 @@
 		if (role == "senate") {
 			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted No - <strong>Click to Thank<strong>" + "</span>").appendTo("#yes-voters");
 		}
-		setClick();
 	}
 	function setClick() {
 		$(".repName").click(function (e) {
@@ -601,6 +599,7 @@
 				 							displayNameNo(cleanName, chamber, contact);
 				 						}
 									}
+									setClick();
 								} else {
 									if (fadeOutCanFire) {
 										fadeOutCanFire = false;
