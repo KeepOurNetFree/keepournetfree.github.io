@@ -142,6 +142,7 @@
 								<input type="text" id="address" placeholder="Input Address (1234 Smith Street, City, State)" />
 								<input type="button" id="addressButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
 								<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
+								<div id="display-pleasewait" style="display: none; color: blue;"><p>Working...</p></div>
 			</div>
 		</div>
 				<div id="yes-voters"></div>
@@ -204,6 +205,9 @@
 	$(document).ready(function() {
 		$("#addressButton").click(function() {
 			clearNames();
+
+			$('#display-pleasewait').fadeIn(); // Display please wait message
+
 			var yesVotes = [
 											'Lisa Murkowski',
 											'Dan Sullivan',
@@ -585,6 +589,9 @@
 							dataType: 'jsonp',
 							contentType: 'jsonp',
 			 				success: function(data) {
+
+			 					$('#display-pleasewait').hide() // Dismiss please wait message
+
 			 					var congresspeople = data['results'];
 								if (congresspeople.length > 0) {
 				 					for(var y = 0; y < congresspeople.length; y++) {
@@ -604,6 +611,7 @@
 									setClick();
 								} else {
 									if (fadeOutCanFire) {
+										$('#display-pleasewait').hide() // Dismiss please wait message
 										fadeOutCanFire = false;
 										$('#display-success').fadeIn().delay(3000).fadeOut();
 										setTimeout(function resetFadeOutCanFire() {
@@ -615,6 +623,7 @@
 						});
 					} else {
 						if (fadeOutCanFire) {
+							$('#display-pleasewait').hide() // Dismiss please wait message
 							fadeOutCanFire = false;
 							$('#display-success').fadeIn().delay(3000).fadeOut();
 							setTimeout(function resetFadeOutCanFire() {
