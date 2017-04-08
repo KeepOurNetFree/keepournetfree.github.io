@@ -56,36 +56,9 @@ footer p {
 }
 
 /* IDs */
-#thankButton {
+#thankButton, #spankButton {
   font-size: 15px;
   height: 47px;
-  color: #3c763d;
-  border: 1px solid #3c763d;
-  background-color: transparent;
-}
-#spankButton {
-  font-size: 15px;
-  height: 47px;
-  color: #9E0000;
-  border: 1px solid #9E0000;
-  background-color: transparent;
-}
-#spankButton:hover, .spank:hover {
-  color: white;
-  background-color: #9E0000;
-}
-#thankButton:hover, .thank:hover {
-  color: white;
-  background-color: #3c763d;
-}
-#address {
-    color: Dimgray;
-    width: 100%;
-    margin-bottom: 12px;
-}
-#addressButton {
-    width: 100%;
-    margin-bottom: 12px;
 }
 #reps {
   margin-top: 35px;
@@ -96,11 +69,27 @@ footer p {
     margin-top: 250px;
 }
 
+#zip {
+  width: 300px;
+  color: Dimgray;
+  float: left;
+  display: inline;
+}
+
+#zipButton {
+  height: 47px;
+  width: 300px;
+  float: right;
+  display: inline-block;
+  height: 47px;
+  margin-bottom: 5px;
+}
+
 #senators {
 	width:100%;
-  border-radius: 20px;
-  padding: 0px;
-  margin: 0;
+    border-radius: 20px;
+    padding: 0px;
+    margin: 0;
 }
 #yes-voters {
   display: block;
@@ -109,10 +98,10 @@ footer p {
 /* CLASSES */
 .repName {
   display: block;
+  border: 1px solid #3c763d;
   color: Dimgray;
   outline: none;
   margin: 0;
-  margin-bottom: 5px;
   font-size: 18px;
   text-align: center;
   background-color: transparent;
@@ -120,14 +109,6 @@ footer p {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   border-radius: 0;
-}
-.thank {
-  color: #3c763d;
-  border: 1px solid #3c763d;
-}
-.spank {
-  color: #9E0000;
-  border: 1px solid #9E0000;
 }
 .reps-table > .row {
   margin-right: 0;
@@ -281,14 +262,13 @@ input[type=text] {
     border-radius: 0;
 }
 
-.btn-default, .btn-default:focus {
+.btn-default {
     border: 1px solid #3c763d;
     color: #3c763d;
     background-color: transparent;
-    outline: none;
 }
 
-.btn-default:hover {
+.btn-default:hover, .btn-default:focus {
     border: 1px solid #3c763d;
     outline: none;
     color: #e6e8ed;
@@ -409,6 +389,14 @@ input[type=text] {
     .navbar-nav {
       margin-top: 0px;
       background: rgba(50,52,55,.5);
+    }
+    #zip {
+        color: Dimgray;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    #zipButton {
+        width: 100%;
     }
     #download {
       font-size: 2vw;
