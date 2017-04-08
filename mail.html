@@ -576,7 +576,7 @@
 				url: 'http://nominatim.openstreetmap.org/search?q=' + address + '&format=json',
 				success: function(data) {
 					var response = data['0'];
-					if (response != null) {
+					if (data.length != 0) {
 						latitude = response['lat'];
 						longitude = response['lon'];
 						$.ajax({
@@ -586,23 +586,33 @@
 							contentType: 'jsonp',
 			 				success: function(data) {
 			 					var congresspeople = data['results'];
-			 					for(var y = 0; y < congresspeople.length; y++) {
-			 						var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
-									var cleanName = removeDiacritics(name);
-									var chamber = congresspeople[y]['chamber'];
-									var contact = congresspeople[y]['contact_form'];
-									if(contact == null) {
-										contact = congresspeople[y]['website'];
+								if (congresspeople.length > 0) {
+				 					for(var y = 0; y < congresspeople.length; y++) {
+				 						var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
+										var cleanName = removeDiacritics(name);
+										var chamber = congresspeople[y]['chamber'];
+										var contact = congresspeople[y]['contact_form'];
+										if(contact == null) {
+											contact = congresspeople[y]['website'];
+										}
+				 						if(yesVotes.includes(cleanName)) {
+				 							displayNameYes(cleanName, chamber, contact);
+				 						} else {
+				 							displayNameNo(cleanName, chamber, contact);
+				 						}
 									}
-			 						if(yesVotes.includes(cleanName)) {
-			 							displayNameYes(cleanName, chamber, contact);
-			 						} else {
-			 							displayNameNo(cleanName, chamber, contact);
-			 						}
-			 					}
-							}
+								} else {
+									if (fadeOutCanFire) {
+										fadeOutCanFire = false;
+										$('#display-success').fadeIn().delay(3000).fadeOut();
+										setTimeout(function resetFadeOutCanFire() {
+											fadeOutCanFire = true;
+										}, 3000);
+									}
+								}
+		 					}
 						});
-		 			} else {
+					} else {
 						if (fadeOutCanFire) {
 							fadeOutCanFire = false;
 							$('#display-success').fadeIn().delay(3000).fadeOut();
