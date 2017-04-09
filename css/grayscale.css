@@ -353,9 +353,6 @@ input[type=text] {
 .content-section {
     padding-top: 100px;
 }
-.text {
-  text-align: left;
-}
 .light {
     font-weight: 400;
 }
@@ -391,6 +388,12 @@ input[type=text] {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 25px;
+  }
+}
 
 @media (min-width: 767px) {
     ul.banner-social-buttons li {

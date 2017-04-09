@@ -71,7 +71,7 @@
 						<a href="#page-top"></a>
 					</li>
 					<li>
-						<a class="page-scroll" href="index.html#about">Information</a>
+						<a class="page-scroll" href="information.html">Information</a>
 					</li>
                     <!--
 					<li>
@@ -79,7 +79,7 @@
 					</li>
                     -->
 					<li>
-						<a class="page-scroll" href="index.html#contact">Act</a>
+						<a class="page-scroll" href="act.html">Act</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="mail.html">Mail Congress</a>
@@ -142,6 +142,7 @@
 								<input type="text" id="address" placeholder="Input Address (1234 Smith Street, City, State)" />
 								<input type="button" id="addressButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
 								<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
+								<div id="display-pleasewait" style="display: none; color: blue;"><p>Working...</p></div>
 			</div>
 		</div>
 				<div id="yes-voters"></div>
@@ -149,14 +150,16 @@
 	</section>
 
 	<!-- Footer -->
-    <footer>
-        <p style="text-align: center">KeepOurNetFree, Private Internet Access, Snoonet, and affiliates aim to protect the integrity of the Internet.</p>
-        <br><br>
-        <div class="container text-center">
+	<footer>
+		<h6 style="text-align: center">KeepOurNetFree is a grassroots movement dedicated to promoting online privacy. We do not take donations and are staffed entirely by volunteers.
+		<br><br>
+		KeepOurNetFree, Private Internet Access, Snoonet, and affiliates aim to protect the Integrity of the Internet.</h6>
+		
+		<div class="container text-center">
             <a href="https://www.privateinternetaccess.com/"><img src="img/pia.png" style="max-width:50%;"></img></a>
-            <a href="https://webchat.snoonet.org/KeepOurNetFree"><img src="img/snoonet.png" style="max-width:25%;max-height:25%;margin-right: 10px;"></img></a>
-        </div>
-    </footer>
+			<a href="https://webchat.snoonet.org/KeepOurNetFree"><img src="img/snoonet.png" style="max-width:25%;max-height:25%;margin-right: 10px;"></img></a>
+		</div>
+	</footer>
 
 	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.js"></script>
@@ -202,6 +205,9 @@
 	$(document).ready(function() {
 		$("#addressButton").click(function() {
 			clearNames();
+
+			$('#display-pleasewait').fadeIn(); // Display please wait message
+
 			var yesVotes = [
 											'Lisa Murkowski',
 											'Dan Sullivan',
@@ -583,6 +589,7 @@
 							dataType: 'jsonp',
 							contentType: 'jsonp',
 			 				success: function(data) {
+                $('#display-pleasewait').hide() // Dismiss please wait message
 			 					var congresspeople = data['results'];
 								if (congresspeople.length > 0) {
 				 					for(var y = 0; y < congresspeople.length; y++) {
@@ -602,6 +609,7 @@
 									setClick();
 								} else {
 									if (fadeOutCanFire) {
+										$('#display-pleasewait').hide() // Dismiss please wait message
 										fadeOutCanFire = false;
 										$('#display-success').fadeIn().delay(3000).fadeOut();
 										setTimeout(function resetFadeOutCanFire() {
@@ -613,6 +621,7 @@
 						});
 					} else {
 						if (fadeOutCanFire) {
+							$('#display-pleasewait').hide() // Dismiss please wait message
 							fadeOutCanFire = false;
 							$('#display-success').fadeIn().delay(3000).fadeOut();
 							setTimeout(function resetFadeOutCanFire() {
