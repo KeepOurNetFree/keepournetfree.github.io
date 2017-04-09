@@ -646,6 +646,9 @@
   window.onbeforeunload = function () {
     localStorage.removeItem("address");
   }
+	window.onpagehide = function () {
+		localStorage.removeItem("address");
+	}
 </script>
 <script>
 	$("#address").keyup(function(event){
