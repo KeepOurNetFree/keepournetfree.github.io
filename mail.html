@@ -589,9 +589,7 @@
 							dataType: 'jsonp',
 							contentType: 'jsonp',
 			 				success: function(data) {
-
-			 					$('#display-pleasewait').hide() // Dismiss please wait message
-
+                $('#display-pleasewait').hide() // Dismiss please wait message
 			 					var congresspeople = data['results'];
 								if (congresspeople.length > 0) {
 				 					for(var y = 0; y < congresspeople.length; y++) {
