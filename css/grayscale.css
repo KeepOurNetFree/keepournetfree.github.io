@@ -74,7 +74,7 @@ footer p {
   color: white;
   background-color: #9E0000;
 }
-#thankButton:hover, .thank:hover {
+#thankButton:hover, .thank:hover, .stateRepName:hover {
   color: white;
   background-color: #3c763d;
 }
@@ -83,7 +83,7 @@ footer p {
     width: 100%;
     margin-bottom: 12px;
 }
-#addressButton {
+#nationalButton, #stateButton {
     width: 100%;
     margin-bottom: 12px;
 }
@@ -102,11 +102,28 @@ footer p {
   padding: 0px;
   margin: 0;
 }
-#yes-voters {
+#results {
   display: block;
   margin-top: 10px;
+  width: 100%;
 }
 /* CLASSES */
+.stateRepName {
+  display: block;
+  color: Dimgray;
+  outline: none;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-align: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  border-radius: 0;
+  color: #3c763d;
+  border: 1px solid #3c763d;
+}
 .repName {
   display: block;
   color: Dimgray;
@@ -389,26 +406,23 @@ input[type=text] {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 350px) {
+@media (max-width: 550px) {
   h2 {
     font-size: 25px;
   }
+  .repName, .stateRepName {
+    font-size: 10px;
+  }
+  .navbar-nav {
+    margin-top: 0px;
+    background: rgba(50,52,55,.5);
+  }
+  #download {
+    font-size: 2vw;
+  }
 }
 
-@media (min-width: 767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-    #yes-votes {
-      width: auto;
-      height: auto;
-      max-width: 90vw;
-    }
-}
-
-@media (max-width:768px) {
+@media (min-width: 551px; max-width: 767px) {
     .navbar-nav {
       margin-top: 0px;
       background: rgba(50,52,55,.5);
@@ -416,13 +430,8 @@ input[type=text] {
     #download {
       font-size: 2vw;
     }
-    .repName {
-      font-size: 2.5vw;
-    }
-	#yes-votes {
-      width: auto;
-      height: auto;
-      max-width: 90vw;
+    .repName, .stateRepName {
+      font-size: 13px;
     }
 }
 
@@ -435,10 +444,10 @@ input[type=text] {
         margin: 0 0 35px;
         font-size: 20px;
         line-height: 1.6; }
-		#yes-votes {
-      width: auto;
-      height: auto;
-      max-width: 45vw;
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
     }
 }
 
