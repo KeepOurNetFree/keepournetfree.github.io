@@ -99,6 +99,30 @@
 				<p>
 					Use the tool below to find your state legislators. Then, call or email them and urge them to implement state level internet privacy laws.
 				</p>
+
+                <div>
+                    <input type="button" id="thankButton" onclick="letterShow()" class="btn btn-lg" value="Show Letter">
+                </div>
+
+                <br><br>
+
+                <div id="letter" style="display: none">
+                    <p style="text-align: left">
+                    Dear [Your Legislator],
+                    <br><br>
+                    A bill in congress recently passed that opened the gates to allow Internet service providers to sell their customers data and Internet history to third parties. Though this was a deregulation of a previous bill, it is a major violation of the rights of consumers and leaves them exposed to have their data sold to third parties. The data people send over the Internet is sensitive, yet this recent bill is treating it as if it is not so, when in fact much of this data is private and confidential.
+                    <br><br>
+                    The only reason that such a bill passed is because Internet service providers, the only parties whom this would benefit, lobbied for this bill to pass without the best interest of their customers in mind. Arguments have been made that these regulations were unnecessary and suppressed the Internet service providers that it regulated, but this is a falsehood.  Most Internet service providers are already monopolies, and as a result regulations are required to prevent these companies from abusing their customers without their knowledge.
+                    <br><br>
+                    The state of Minnesota has already passed a law that protects the consumer privacy that the bill sacrificed.  Several other states have also followed suit. We too, should also protect consumer privacy and pass laws similar to that of Minnesota's.
+                    <br><br>
+                    As a concerned citizen of this state I urge you to conceder the best interests of your constituents and push for a law to protect the privacy of the citizens of this state.
+                    <br><br>
+                    Sincerely, <br><br>
+                    [Your Name] <br><br>
+                    </p>
+                </div>
+
 				<input type="text" id="address" placeholder="Input Address (1234 Smith Street, City, State)" />
 				<input type="button" id="addressButton" class="btn btn-default btn-lg" value="Find My State Legislators"></a>
 				<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
@@ -341,6 +365,9 @@
 			$("#addressButton").click();
 		}
 	});
+    function letterShow() {
+        $('#letter').fadeIn();
+    }
 </script>
 
 </html>
