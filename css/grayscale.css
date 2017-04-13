@@ -108,7 +108,7 @@ footer p {
   width: 100%;
 }
 /* CLASSES */
-.stateRepName {
+.stateRepName, .repName {
   display: block;
   color: Dimgray;
   outline: none;
@@ -123,20 +123,6 @@ footer p {
   border-radius: 0;
   color: #3c763d;
   border: 1px solid #3c763d;
-}
-.repName {
-  display: block;
-  color: Dimgray;
-  outline: none;
-  margin: 0;
-  margin-bottom: 5px;
-  font-size: 18px;
-  text-align: center;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  border-radius: 0;
 }
 .thank {
   color: #3c763d;
