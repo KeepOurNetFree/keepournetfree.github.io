@@ -576,7 +576,7 @@
       return str;
     }
     $.ajax({
-      url: 'http://nominatim.openstreetmap.org/search?q=' + address + '&format=json',
+      url: 'https://nominatim.openstreetmap.org/search?q=' + address + '&format=json',
       success: function(data) {
         var response = data['0'];
         if (data.length != 0) {
