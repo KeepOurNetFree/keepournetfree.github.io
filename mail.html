@@ -110,13 +110,13 @@
 			</div>
 
 			<div class="col-lg-8 col-lg-offset-2">
-				<h2>Rant to the FTC</h2>
+				<h2>Rant to the FCC</h2>
 				<p>
 					Use this tool to express your concerns about net neutrality to FTC.
 				</p>
-				<input type="button" id="mailftc" class="btn btn-default btn-lg" value="Mail The FTC"></a>
+				<input type="button" id="mailftc" class="btn btn-default btn-lg" value="Mail The FCC"></a>
 
-				<div id="display-ftc" style="display: none; color: red;"><p><br><br>Your mail client should open momentarily with the below message addressed to the FTC, otherwise you can still copy/paste the message manually.<br><br></p></div>
+				<div id="display-ftc" style="display: none; color: red;"><p><br><br>Your mail client should open momentarily with the below message addressed to the FCC, otherwise you can still copy/paste the message manually to Ajit.Pai@fcc.gov.<br><br></p></div>
 				
 				<div id="display-ftc-letter" style="display: none; color: blue;"><p id="ftc-letter-content">Morgan Freeman was born in 1937. He narrated his own birth. Saying leaving the warm comfort of his mothers womb, I Morgan Freeman enter the world. Soon I will make my first poop, one of many in the life of Morgan Freeman. The first time that Morgan Freeman saw himself crying in the mirror he became old and he remained that way his whole life. From then on, every time that Morgan Freeman cried it rained in heaven. When Morgan Freeman makes a documentary film, he narrates it first and then nature makes it so. The only reason that the sun rises each day is because Morgan Freeman narrated that sunrise in his dreams the night before.
 				<br><br>
@@ -171,7 +171,8 @@
 		// email to FTC
 		$("#mailftc").focus(function() {
 			var body_message = $('#ftc-letter-content').text();
-			var email = 'antitrust@ftc.gov';
+			//var email = 'antitrust@ftc.gov';
+			var email = 'Ajit.Pai@fcc.gov';
 			var subject = 'js email';
 
 			var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + body_message;
