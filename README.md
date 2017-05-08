@@ -13,7 +13,8 @@ You are more than welcome to contribute, feel free to.  Just let us know what yo
 
 ### Syntax and Standards
 * Comment other people's code instead of deleting it, let them delete it
-* Avoid "hacky" stuff like document.getElementById('derp'), use JQuery instead
+* Avoid "hacky" stuff like embedded hex values
+* Keep code readable, example: document.getElementById('derp') use JQuery instead
 * Avoid pushing to master unless you absolutely have to, master is live code
 * Please for the love of all things sacred comment any scripts you write
 

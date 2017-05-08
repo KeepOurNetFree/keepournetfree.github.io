@@ -23,6 +23,7 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 	<!-- Google Analytics -->
+	<!--
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -33,6 +34,7 @@
 		ga('send', 'pageview');
 
 		</script>
+	-->
 	<!-- End Google Analytics -->
 
 </head>
@@ -82,7 +84,7 @@
 						<a class="page-scroll" href="act.html">Act</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="mail.html">Mail Congress</a>
+						<a class="page-scroll" href="mail.html">Tools</a>
 					</li>
 				</ul>
 			</div>
@@ -97,14 +99,22 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<h2>Contact your Congressperson</h2>
 				<p>
-					Use the tool below to find your congressperson/legislator.
+					Use this tool to find your congressperson/legislator.
 				</p>
 				<input type="text" id="address" placeholder="Input Address (1234 Smith Street, City, State)" />
 				<input type="button" id="nationalButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
 				<input type="button" id="stateButton" class="btn btn-default btn-lg" value="Find My State Legislators"></a>
 				<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
 				<div id="display-pleasewait" style="display: none; color: blue;"><p>Working...</p></div>
-				<div id="results"></div>
+				<br><br><hr />
+			</div>
+
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>Rant to the FCC</h2>
+				<p>
+					Use this tool to express your concerns about net neutrality to FCC.
+				</p>
+				<input type="button" id="mailfcc" class="btn btn-default btn-lg" value="Mail The FCC"></a>
 			</div>
 		</div>
 	</section>
@@ -148,6 +158,12 @@
 			localStorage.setItem("address", address);
 			window.open('nationalmail.html', '_blank');
 		});
+		
+		// email to FCC
+		$("#mailfcc").click(function() {;
+			window.open('fccmail.html', '_blank');
+		});
+
 		$("#address").focus(function() {
 			$("#address").val("");
 		});
