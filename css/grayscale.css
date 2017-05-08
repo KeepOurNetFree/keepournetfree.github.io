@@ -114,7 +114,7 @@ footer p {
   outline: none;
   margin: 0;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   background-color: transparent;
   text-transform: uppercase;
@@ -130,7 +130,7 @@ footer p {
   outline: none;
   margin: 0;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
   background-color: transparent;
   text-transform: uppercase;
@@ -162,6 +162,7 @@ footer p {
 }
 .navbar-collapse {
   border: none;
+  background: rgba(50,52,55,1);
 }
 .navbar {
   height: 80px;

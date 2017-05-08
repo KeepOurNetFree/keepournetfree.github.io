@@ -127,10 +127,10 @@
 				<input type="button" id="addressButton" class="btn btn-default btn-lg" value="Find My State Legislators"></a>
 				<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
 				<div id="display-pleasewait" style="display: none; color: blue;"><p>Working...</p></div>
-			</div>
-		</div>
 				<div id="results"></div>
         <br><br>
+			</div>
+		</div>
 	</section>
 
 	<!-- Footer -->
@@ -162,13 +162,13 @@
 <script type="text/javascript">
   function displayName(rep, role, contactForm) {
     if (role == "upper") {
-      $("<span class='repName thank btn btn-lg' page=" + "'" + contactForm + "'" + ">" + "State Representative " + rep + " - <strong>Click to View</strong>" + "</span>").appendTo("#results");
+      $("<span class='stateRepName btn btn-lg' page=" + "'" + contactForm + "'" + ">" + "State Representative " + rep + " - <strong>Click to View</strong>" + "</span>").appendTo("#results");
     }
     if (role == "lower") {
-      $("<span class='repName thank btn btn-lg' page=" + "'" + contactForm + "'" + ">" + "State Senator " + rep + " - <strong>Click to View</strong>" + "</span>").appendTo("#results");
+      $("<span class='stateRepName btn btn-lg' page=" + "'" + contactForm + "'" + ">" + "State Senator " + rep + " - <strong>Click to View</strong>" + "</span>").appendTo("#results");
     }
     if (role == "unicameral") {
-      $("<span class='repName thank btn btn-lg' page=" + "'" + contactForm + "'" + ">" + "State Representative " + rep + " - <strong>Click to View</strong>" + "</span>").appendTo("#results");
+      $("<span class='stateRepName btn btn-lg' page=" + "'" + contactForm + "'" + ">" + "State Representative " + rep + " - <strong>Click to View</strong>" + "</span>").appendTo("#results");
     }
   }
   function setClick() {
@@ -287,7 +287,7 @@
       return str;
     }
     $.ajax({
-      url: 'http://nominatim.openstreetmap.org/search?q=' + address + '&format=json',
+      url: 'https://nominatim.openstreetmap.org/search?q=' + address + '&format=json',
       success: function(data) {
         var response = data['0'];
         if (data.length != 0) {
@@ -299,7 +299,6 @@
             dataType: 'jsonp',
             contentType: 'jsonp',
             success: function(data) {
-              console.log(data);
               if (data.length > 0) {
                 $('#display-pleasewait').hide()
                 for(var y = 0; y < data.length; y++) {
