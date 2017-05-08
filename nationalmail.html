@@ -179,18 +179,18 @@
 <!-- Logic JavaScript -->
 <script type="text/javascript">
 	function displayNameYes(rep, role, contactForm) {
-		if (role == "house") {
+		if (role == "representative") {
 			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#results");
 		}
-		if (role == "senate") {
+		if (role == "senator") {
 			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#results");
 		}
 	}
 	function displayNameNo(rep, role, contactForm) {
-		if (role == "house") {
+		if (role == "representative") {
 			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted No - <strong>Click to Thank</strong>" + "</span>").appendTo("#results");
 		}
-		if (role == "senate") {
+		if (role == "senator") {
 			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted No - <strong>Click to Thank<strong>" + "</span>").appendTo("#results");
 		}
 	}
@@ -583,21 +583,53 @@
           latitude = response['lat'];
           longitude = response['lon'];
           $.ajax({
-            url: 'https://congress.api.sunlightfoundation.com/legislators/locate?latitude=' + latitude + '&longitude=' + longitude,
+            url: 'https://api.civil.services/v1/house?apikey=6326CA76-01D4-4644-B522-B268BC0C296D&latitude=' + latitude + '&longitude=' + longitude,
             crossDomain: true,
-            dataType: 'jsonp',
-            contentType: 'jsonp',
             success: function(data) {
               $('#display-pleasewait').hide() // Dismiss please wait message
-              var congresspeople = data['results'];
-              if (congresspeople.length > 0) {
-                for(var y = 0; y < congresspeople.length; y++) {
-                  var name = congresspeople[y]['first_name'] + " " + congresspeople[y]['last_name'];
+              var congressPeople = data['data'];
+              if (congressPeople.length > 0) {
+                for(var y = 0; y < congressPeople.length; y++) {
+                  var name = congressPeople[y]['name'];
                   var cleanName = removeDiacritics(name);
-                  var chamber = congresspeople[y]['chamber'];
-                  var contact = congresspeople[y]['contact_form'];
+                  var chamber = congressPeople[y]['title'];
+                  var contact = congressPeople[y]['contact_page'];
                   if(contact == null) {
-                    contact = congresspeople[y]['website'];
+                    contact = congressPeople[y]['website'];
+                  }
+                  if(yesVotes.includes(cleanName)) {
+                    displayNameYes(cleanName, chamber, contact);
+                  } else {
+                    displayNameNo(cleanName, chamber, contact);
+                  }
+                }
+                setClick();
+              } else {
+                if (fadeOutCanFire) {
+                  $('#display-pleasewait').hide() // Dismiss please wait message
+                  fadeOutCanFire = false;
+                  $('#display-success').fadeIn().delay(3000).fadeOut();
+                  setTimeout(function resetFadeOutCanFire() {
+                    fadeOutCanFire = true;
+                  }, 3000);
+                }
+              }
+            }
+          });
+					$.ajax({
+            url: 'https://api.civil.services/v1/senate?apikey=6326CA76-01D4-4644-B522-B268BC0C296D&latitude=' + latitude + '&longitude=' + longitude,
+            crossDomain: true,
+            success: function(data) {
+              $('#display-pleasewait').hide() // Dismiss please wait message
+              var congressPeople = data['data'];
+              if (congressPeople.length > 0) {
+                for(var y = 0; y < congressPeople.length; y++) {
+                  var name = congressPeople[y]['name'];
+                  var cleanName = removeDiacritics(name);
+                  var chamber = congressPeople[y]['title'];
+                  var contact = congressPeople[y]['contact_page'];
+                  if(contact == null) {
+                    contact = congressPeople[y]['website'];
                   }
                   if(yesVotes.includes(cleanName)) {
                     displayNameYes(cleanName, chamber, contact);
