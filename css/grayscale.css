@@ -14,7 +14,7 @@ html {
     height: 100%
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -51,12 +51,8 @@ footer {
     padding: 50px 0;
 }
 
-footer p {
-    margin: 0;
-}
-
 /* IDs */
-#thankButton {
+#thankButton, #letterButton {
   font-size: 15px;
   height: 47px;
   color: #3c763d;
@@ -74,7 +70,7 @@ footer p {
   color: white;
   background-color: #9E0000;
 }
-#thankButton:hover, .thank:hover, .stateRepName:hover {
+#thankButton:hover, #letterButton:hover, .stateRepName:hover {
   color: white;
   background-color: #3c763d;
 }
@@ -90,25 +86,13 @@ footer p {
 #reps {
   margin-top: 35px;
 }
-#map {
-    width: 100%;
-    height: 400px;
-    margin-top: 250px;
-}
-
-#senators {
-	width:100%;
-  border-radius: 20px;
-  padding: 0px;
-  margin: 0;
-}
 #results {
   display: block;
   margin-top: 10px;
   width: 100%;
 }
 /* CLASSES */
-.stateRepName {
+.stateRepName, .repName {
   display: block;
   color: Dimgray;
   outline: none;
@@ -122,70 +106,45 @@ footer p {
   font-weight: 400;
   border-radius: 0;
   color: #3c763d;
-  border: 1px solid #3c763d;
 }
 .repName {
-  display: block;
-  color: Dimgray;
-  outline: none;
-  margin: 0;
-  margin-bottom: 5px;
-  font-size: 14px;
-  text-align: center;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
   border-radius: 0;
 }
-.thank {
-  color: #3c763d;
+.stateRepName {
   border: 1px solid #3c763d;
 }
-.spank {
-  color: #9E0000;
-  border: 1px solid #9E0000;
-}
-.reps-table > .row {
-  margin-right: 0;
-  font-size: 1.1em;
-  border-bottom: 1px solid #555;
-}
-.col-xs-4 {
-  padding: 0;
-}
-.page-scroll {
+.nav-item {
   margin-top: 15px;
 }
-.center {
-  width: 100vw;
-}
-.navbar {
+.navbar, .navbar-index {
   height: 80px;
+  margin-bottom: 0;
+  padding: 0;
+  background: rgba(50,52,55,1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+.navbar-top {
+  background: transparent;
 }
 .navbar-nav {
   z-index: 2;
 }
-.navbar-custom {
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    text-transform: uppercase;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-    transition: background .5s ease-in-out, padding .5s ease-in-out;
-}
-.navbar-custom .navbar-toggle {
+.navbar-toggle {
     padding: 15px 0px;
     margin-top: 13px;
     margin-bottom: 13px;
     font-size: 16px;
     color: white;
 }
-.navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
+.navbar-toggle:focus, .navbar-toggle:active {
     outline: none;
 }
-.navbar-custom .navbar-brand {
+.navbar-brand {
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -195,7 +154,7 @@ footer p {
     font-weight: 700;
     height: auto;
 }
-.navbar-custom .navbar-brand:focus {
+.navbar-brand:focus {
     outline: none;
 }
 .navbar-custom a {
@@ -224,15 +183,6 @@ footer p {
 .navbar-custom .nav li.active a:hover {
     color: white;
 }
-
-.navbar-custom.top-nav-collapse {
-    padding: 0;
-    background: rgba(50,52,55,1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.mail-nav-bar {
-  background: rgba(50,52,55,1);
-}
 .intro {
     display: table;
     width: 100%;
@@ -253,20 +203,8 @@ footer p {
     vertical-align: middle;
 }
 
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
-.intro .intro-body .brand-heading {
+.brand-heading {
     font-size: 100px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 26px;
 }
 
 .btn {
@@ -348,22 +286,6 @@ input[type=text] {
     -moz-animation-timing-function: linear;
 }
 
-#yes-votes {
-  width: auto;
-  height: auto;
-  max-width: 90vw;
-  margin-top: 10px;
-}
-
-.download-section {
-    color: Dimgray;
-    background-color: #e6e8ed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 .content-section {
     padding-top: 100px;
 }
@@ -410,15 +332,9 @@ input[type=text] {
   .repName, .stateRepName {
     font-size: 9px;
   }
-  #download {
-    font-size: 2vw;
-  }
 }
 
 @media (min-width: 551px; max-width: 767px) {
-    #download {
-      font-size: 2vw;
-    }
     .repName, .stateRepName {
       font-size: 13px;
     }
