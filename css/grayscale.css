@@ -216,20 +216,8 @@ footer {
     vertical-align: middle;
 }
 
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
-.intro .intro-body .brand-heading {
+.brand-heading {
     font-size: 100px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 26px;
 }
 
 .btn {
@@ -311,22 +299,6 @@ input[type=text] {
     -moz-animation-timing-function: linear;
 }
 
-#yes-votes {
-  width: auto;
-  height: auto;
-  max-width: 90vw;
-  margin-top: 10px;
-}
-
-.download-section {
-    color: Dimgray;
-    background-color: #e6e8ed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 .content-section {
     padding-top: 100px;
 }
@@ -373,15 +345,9 @@ input[type=text] {
   .repName, .stateRepName {
     font-size: 9px;
   }
-  #download {
-    font-size: 2vw;
-  }
 }
 
 @media (min-width: 551px; max-width: 767px) {
-    #download {
-      font-size: 2vw;
-    }
     .repName, .stateRepName {
       font-size: 13px;
     }
