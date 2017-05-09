@@ -160,10 +160,6 @@ footer p {
 .center {
   width: 100vw;
 }
-.navbar-collapse {
-  border: none;
-  background: rgba(50,52,55,1);
-}
 .navbar {
   height: 80px;
 }
@@ -414,26 +410,25 @@ input[type=text] {
   .repName, .stateRepName {
     font-size: 9px;
   }
-  .navbar-nav {
-    margin-top: 0px;
-    background: rgba(50,52,55,.5);
-  }
   #download {
     font-size: 2vw;
   }
 }
 
 @media (min-width: 551px; max-width: 767px) {
-    .navbar-nav {
-      margin-top: 0px;
-      background: rgba(50,52,55,.5);
-    }
     #download {
       font-size: 2vw;
     }
     .repName, .stateRepName {
       font-size: 13px;
     }
+}
+
+@media (max-width: 767px) {
+  .collapse.in, .collapsing {
+    border: none;
+    background: rgba(50,52,55,1);
+  }
 }
 
 @media (min-width: 768px) {
