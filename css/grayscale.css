@@ -105,18 +105,23 @@ footer {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   border-radius: 0;
-  color: #3c763d;
 }
-.repName {
-  border-radius: 0;
+.spank {
+  border: 1px solid #9E0000;
+  color: #9E0000;
+}
+.thank {
+  border: 1px solid #3c763d;
+  color: #3c763d;
 }
 .stateRepName {
   border: 1px solid #3c763d;
+  color: #3c763d;
 }
 .nav-item {
   margin-top: 15px;
 }
-.navbar, .navbar-index {
+.navbar {
   height: 80px;
   margin-bottom: 0;
   padding: 0;
@@ -130,6 +135,9 @@ footer {
 }
 .navbar-top {
   background: transparent;
+}
+.navbar-solid {
+  background: rgba(50,52,55,1);
 }
 .navbar-nav {
   z-index: 2;
@@ -240,7 +248,7 @@ input[type=text] {
     outline: none;
 }
 
-.btn-default:hover {
+.btn-default:hover, .thank:hover {
     border: 1px solid #3c763d;
     outline: none;
     color: #e6e8ed;
