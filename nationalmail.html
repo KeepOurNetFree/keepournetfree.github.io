@@ -94,8 +94,12 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<h2>Contact your Congressperson</h2>
 				<p>
-					Use the tool below to find your congressperson. Then, call or email them and either thank them for supporting Internet privacy or spank them for opposing it.
+					Use the tool below to find your congressperson. Then, call or email them to urge them to support net neutrality.
 				</p>
+
+				<!-- Old Letter-->
+
+				<!--
                 <div>
                 	<input type="button" id="thankButton" onclick="thankShow()" class="btn btn-lg" value="Thank">
                 	<input type="button" id="spankButton" onclick="spankShow()" class="btn btn-lg" value="Spank">
@@ -136,18 +140,52 @@
                 [Your Name] <br><br>
 							</p></div>
                 <br><br>
-								<input type="text" id="address" placeholder="Input Address (1234 Smith Street, City, State)" />
-								<input type="button" id="addressButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
-								<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
-								<div id="display-pleasewait" style="display: none; color: blue;"><p>Working...</p></div>
-								<div id="results"></div>
+                -->
+
+                	<input type="text" id="address" placeholder="Input Address (1234 Smith Street, City, State)" />
+					<input type="button" id="addressButton" class="btn btn-default btn-lg" value="Find My Congressperson"></a>
+					<div id="display-success" style="display: none; color: red;"><p>Please input a valid U.S. address (Street Address, City, State)</p></div>
+					<div id="display-pleasewait" style="display: none; color: blue;"><p>Working...</p></div>
+					<div id="results"></div>
+
+					<br><br>
+
+                <!-- New Letter (Net Neutrality) -->
+
+                <h3>Letter Template</h3>
+                <br><br>
+				<div id="nn-letter" style=""><p style="text-align: left">
+                	Dear [Your Congressperson], <br><br>
+
+                	I am writing you to express my gratitude for voting against H.J. Res86. As a concerned citizen I am deeply troubled by the fact that this bill has passed.
+
+                	Net neutrality is the principle that Internet service providers and governments regulating the Internet should treat all data on the Internet the same, not discriminating or charging differentially by user, content, website, platform, application, type of attached equipment, or mode of communication.
+                	<br><br>
+
+					Without net neutrality, ISPs can force websites like Amazon or Netflix to pay additional fees to be accessible. Without net neutrality ISPs have the ability to smother their competition by simply making it inaccessible to consumers. Garage-based startups of the world simply cease to exist, unable to even reach market. If net neutrality is removed ISPs will have full reign over the internet, this likely means you can expect to see things like Internet fast lanes - what does that mean? Imagine having to pay extra money to access websites like Facebook or Hulu.
+					<br><br>
+
+					Removing net neutrality would without a doubt be the largest chilling effect in this history of humankind. Net neutrality is the cornerstone of our modern world, it is what allows everyone to utilize the Internet equally. Net neutrally is what assures that the Internet is a free and open place for the exchange of ideas and thoughts, without it innovative progress would come to a halt and online communities would slowly disappear.
+					<br><br>
+
+					Net neutrality is in the best interest of all small businesses, consumers and indeed humanity.
+					As a concerned citizen of your state I urge you to support net neutrality and Title II regulations for ISPs
+					<br><br>
+
+					Sincerely, <br><br>
+
+                	[Your Name] <br><br>
+				</div>
+				<br><br>
+
 			</div>
+			
 		</div>
 	</section>
 
 	<!-- Footer -->
 	<footer>
-		<h6 style="text-align: center">KeepOurNetFree is a grassroots movement dedicated to promoting online privacy. We do not take donations and are staffed entirely by volunteers.
+		<h6 style="text-align: center">KeepOurNetFree is a grassroots movement dedicated to promoting Internet rights. We do not take donations and are staffed entirely by volunteers.
 		<br><br>
 		KeepOurNetFree, Private Internet Access, Snoonet, and affiliates aim to protect the Integrity of the Internet.
 		<br><br>
@@ -177,18 +215,18 @@
 <script type="text/javascript">
 	function displayNameYes(rep, role, contactForm) {
 		if (role == "representative") {
-			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#results");
+			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - <strong>Click to Mail</strong>" + "</span>").appendTo("#results");
 		}
 		if (role == "senator") {
-			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted Yes - <strong>Click to Spank</strong>" + "</span>").appendTo("#results");
+			$("<span class='repName spank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - <strong>Click to Mail</strong>" + "</span>").appendTo("#results");
 		}
 	}
 	function displayNameNo(rep, role, contactForm) {
 		if (role == "representative") {
-			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - Voted No - <strong>Click to Thank</strong>" + "</span>").appendTo("#results");
+			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Representative " + rep + " - <strong>Click to Mail</strong>" + "</span>").appendTo("#results");
 		}
 		if (role == "senator") {
-			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - Voted No - <strong>Click to Thank<strong>" + "</span>").appendTo("#results");
+			$("<span class='repName thank btn btn-lg' contact=" + "'" + contactForm + "'" + ">" + "Senator " + rep + " - <strong>Click to Mail<strong>" + "</span>").appendTo("#results");
 		}
 	}
 	function setClick() {
@@ -694,6 +732,9 @@
   function spankShow() {
 		$('#thank-you-letter').hide();
     $('#spank-you-letter').fadeIn();
+  }
+  function letterShow() {
+  	$('nn-letter').fadeIn();
   }
 </script>
 
