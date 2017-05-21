@@ -52,11 +52,18 @@ footer {
 }
 
 /* IDs */
-#thankButton, #letterButton {
+ #letterButton {
   font-size: 15px;
   height: 47px;
   color: #3c763d;
   border: 1px solid #3c763d;
+  background-color: transparent;
+}
+#thankButton {
+  font-size: 15px;
+  height: 47px;
+  color: #0000FF;
+  border: 1px solid #0000FF;
   background-color: transparent;
 }
 #spankButton {
@@ -70,7 +77,11 @@ footer {
   color: white;
   background-color: #9E0000;
 }
-#thankButton:hover, #letterButton:hover, .stateRepName:hover {
+#thankButton:hover, .thank:hover {
+  color: white;
+  background-color: #0000FF;
+}
+#letterButton:hover, .stateRepName:hover {
   color: white;
   background-color: #3c763d;
 }
@@ -111,8 +122,8 @@ footer {
   color: #9E0000;
 }
 .thank {
-  border: 1px solid #3c763d;
-  color: #3c763d;
+  border: 1px solid #0000FF;
+  color: #0000FF;
 }
 .stateRepName {
   border: 1px solid #3c763d;
@@ -248,7 +259,7 @@ input[type=text] {
     outline: none;
 }
 
-.btn-default:hover, .thank:hover {
+.btn-default:hover{
     border: 1px solid #3c763d;
     outline: none;
     color: #e6e8ed;
