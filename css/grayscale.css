@@ -77,7 +77,7 @@ footer {
   color: white;
   background-color: #9E0000;
 }
-#thankButton:hover .thank:hover {
+#thankButton:hover, .thank:hover {
   color: white;
   background-color: #0000FF;
 }
