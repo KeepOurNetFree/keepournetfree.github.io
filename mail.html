@@ -178,8 +178,6 @@
 		$('#installextension').click(function() {
 			chrome.webstore.install('https://chrome.google.com/webstore/detail/macmdnlopncdoehmjhfenfblflnohoen', function() {
 				document.getElementById('installextension').value = "Thank you for installing our extension!";
-			}, function(details) {
-				window.alert("Error installing extension: " + details);
 			});
 		});
 
