@@ -37,6 +37,9 @@
 	-->
 	<!-- End Google Analytics -->
 
+	<!-- Removal of Net Neutrality Simulator -->
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/macmdnlopncdoehmjhfenfblflnohoen">
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
@@ -110,6 +113,15 @@
 					Use this tool to express your concerns about net neutrality to FCC.
 				</p>
 				<input type="button" id="mailfcc" class="btn btn-default btn-lg" value="Mail The FCC"></a>
+				<br><br><hr />
+			</div>
+
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>See what removing Net Neutrality would do</h2>
+				<p>
+					This Chrome extension demonstrates the impact of removing Net Neutrality by simulating the internet without Net Neutrality.
+				</p>
+				<input type="button" id="installextension" class="btn btn-default btn-lg" value="Install the extension"></a>
 			</div>
 		</div>
 	</section>
@@ -159,6 +171,15 @@
 		// email to FCC
 		$("#mailfcc").click(function() {;
 			window.open('fccmail.html', '_blank');
+		});
+
+		// nn extension
+		$('#installextension').click(function() {
+			chrome.webstore.install('https://chrome.google.com/webstore/detail/macmdnlopncdoehmjhfenfblflnohoen', function() {
+				document.getElementById('installextension').value = "Thank you for installing our extension!";
+			}, function(details) {
+				window.alert("Error installing extension: " + details);
+			});
 		});
 
 		$("#address").focus(function() {
