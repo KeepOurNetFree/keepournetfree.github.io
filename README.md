@@ -1,13 +1,13 @@
 [![Join The Conversation](https://discordapp.com/api/guilds/295745377083326464/embed.png)](https://discord.gg/GFt67vr) [![Stories in Ready](https://badge.waffle.io/KeepOurNetFree/keepournetfree.github.io.png?label=ready&title=Ready)](https://waffle.io/KeepOurNetFree/keepournetfree.github.io)
 # [KeepOurNetFree](http://www.keepournetfree.org/)
 
-[KeepOurNetFree](http://www.keepournetfree.org/) is a website designed to inform about the dangers of S.J.Res.34 and how to fight back against it.
+[KeepOurNetFree](http://www.keepournetfree.org/) is a website designed to inform about internet rights issues such as net neutrality and privacy, and how to fight back against actions that attempt to strip away these rights.
 
 ## If You Want to Contribute
 
 You are more than welcome to contribute, feel free to.  Just let us know what you are doing so that we don't reinvent the wheel 9000 times.
 * Send one of us a message
-* Join us on IRC (irc.snoonet.org#KeepOurNetFree)
+* Join us on [Discord](https://discord.gg/GFt67vr)
 * Fork this repository on GitHub
 * Send a pull request
 
