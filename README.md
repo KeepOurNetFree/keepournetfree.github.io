@@ -1,7 +1,7 @@
-[![Join The Conversation](https://discordapp.com/api/guilds/295745377083326464/embed.png)](https://discord.gg/GFt67vr) [![Stories in Ready](https://badge.waffle.io/KeepOurNetFree/keepournetfree.github.io.png?label=ready&title=Ready)](https://waffle.io/KeepOurNetFree/keepournetfree.github.io)
-# [KeepOurNetFree](http://www.keepournetfree.org/)
+[![Join The Conversation](https://discordapp.com/api/guilds/295745377083326464/embed.png)](https://discord.gg/GFt67vr)
+# [KeepOurNetFree](https://keepournetfree.github.io/)
 
-[KeepOurNetFree](http://www.keepournetfree.org/) is a website designed to inform about internet rights issues such as net neutrality and privacy, and how to fight back against actions that attempt to strip away these rights.
+[KeepOurNetFree](https://keepournetfree.github.io/) is a website designed to inform about internet rights issues such as net neutrality and privacy, and how to fight back against actions that attempt to strip away these rights.
 
 ## If You Want to Contribute
 
