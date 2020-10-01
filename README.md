@@ -3,13 +3,13 @@
 
 [KeepOurNetFree](https://keepournetfree.github.io/) is a website designed to inform about internet rights issues such as net neutrality and privacy, and how to fight back against actions that attempt to strip away these rights.
 
-## If You Want to Contribute
+## If You Want to Contributes
 
 You are more than welcome to contribute, feel free to.  Just let us know what you are doing so that we don't reinvent the wheel 9000 times.
 * Send one of us a message
 * Join us on [Discord](https://discord.gg/GFt67vr)
 * Fork this repository on GitHub
-* Send a pull request
+* Send a pull requests
 
 ### Syntax and Standards
 * Comment other people's code instead of deleting it, let them delete it
